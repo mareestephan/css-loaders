@@ -7,16 +7,31 @@
 .loader > span {
     display: inline-block;
     background-color: purple;
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     margin: 0 8px;
+    transform: translate3d(0);
+    animation: bounce 0.5s infinite alternate;
+ 
+
 }
 
 .loader > span:nth-child(2){
     background-color: palevioletred;
+    animation-delay: 0.2s;
 }
 
 .loader > span:nth-child(3){
+        animation-delay: 0.4s;
 
+
+}
+
+@keyframes bounce {
+    to {
+        width: 16px;
+        height: 16px;
+        transform: translate3d(0, -16px, 0);
+    }
 }
